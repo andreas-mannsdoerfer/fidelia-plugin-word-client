@@ -1,0 +1,42 @@
+{
+  "name": "com.agosense.fidelia.word.plugin",
+  "description": "Custom action UI for agosense.fidelia to allow import of word documents",
+  "version": "1.8.13",
+  "license": "Apache-2.0",
+  "repository": "private",
+  "dependencies": {
+    "antd": "^3.4.3",
+    "axios": "^0.18.0",
+    "es6-promise": "^4.2.4",
+    "immutability-helper": "^2.6.6",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "@types/immutability-helper": "^2.6.3",
+    "@types/react": "^16.3.12",
+    "@types/react-dom": "^16.0.5",
+    "@types/socket.io-client": "^1.4.32",
+    "babel-plugin-import": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "less": "^3.0.2",
+    "less-loader": "^4.1.0",
+    "less-vars-to-js": "^1.2.1",
+    "maven-deploy": "^1.5.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.2.0",
+    "tslint": "^5.9.1",
+    "tslint-loader": "^3.6.0",
+    "typescript": "^2.8.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "scripts": {
+    "webpack": "webpack --config webpack.config.js",
+    "webpack-dev-server": "webpack-dev-server --config webpack.dev.config.js"
+  }
+}

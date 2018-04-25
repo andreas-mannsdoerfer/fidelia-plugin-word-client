@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noEmitOnError": true,
+        "moduleResolution": "node",
+        "removeComments": true,
+        "charset": "utf8",
+        "target": "es5",
+        "jsx": "react"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "build",
+        "node_modules"
+    ]
+}
