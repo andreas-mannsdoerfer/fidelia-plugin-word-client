@@ -1,8 +1,8 @@
 {
-  "name": "com.agosense.fidelia.word.plugin",
-  "description": "Custom action UI for agosense.fidelia to allow import of word documents",
+  "name": "com.agosense.fidelia.plugin.word.client",
+  "description": "agosense.fidelia plugin word client",
   "version": "1.8.13",
-  "license": "Apache-2.0",
+  "license": "GPLv3",
   "repository": "private",
   "dependencies": {
     "antd": "^3.4.3",
@@ -37,6 +37,5 @@
   },
   "scripts": {
     "webpack": "webpack --config webpack.config.js",
-    "webpack-dev-server": "webpack-dev-server --config webpack.dev.config.js"
   }
 }
