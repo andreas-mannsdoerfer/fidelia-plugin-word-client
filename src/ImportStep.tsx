@@ -1,4 +1,4 @@
-import { Progress } from "antd";
+import { Col, Progress, Row } from "antd";
 import { AxiosInstance } from "axios";
 import update from "immutability-helper";
 import * as React from "react";
@@ -89,8 +89,17 @@ export class ImportStep extends React.Component<IImportStepProps, IImportStepSta
 
     public render() {
         return <div>
-            <p>Please wait while the document is imported</p>
-            <Progress style={{ width: "75%" }} percent={this.state.progress} status="active" />
+            <Row>
+                <Col>
+                    Please wait while the document is imported
+                </Col>
+            </Row>
+            <p />
+            <Row>
+                <Col>
+                    <Progress percent={this.state.progress} status="active" />
+                </Col>
+            </Row>
         </div>;
     }
 

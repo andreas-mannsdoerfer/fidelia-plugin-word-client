@@ -1,4 +1,4 @@
-import { Button, Select } from "antd";
+import { Button, Col, Row, Select } from "antd";
 import { AxiosInstance } from "axios";
 import update from "immutability-helper";
 import * as React from "react";
@@ -51,20 +51,33 @@ export class AttributeStep extends React.Component<IAttributeStepProps, IAttribu
     public render() {
 
         return <div>
-            <p>Please select the attribute where the document content should be imported </p>
+            <Row>
+                <Col>
+                    Please select the attribute where the document content should be imported
+                </Col>
+            </Row>
             <p />
-            <Select style={{ width: 120 }} onChange={(value) =>
-                this.setState(update(this.state, { selectedAttribute: { $set: value } }))
-            }>
-                {this.state.attributes.map((attribute) =>
-                    <Select.Option key={attribute.id} value={attribute.id}>{attribute.name}</Select.Option>)
-                }
-            </Select>
+            <Row>
+                <Col>
+                    <Select style={{ width: 300 }} placeholder="Select an attribute" onChange={(value) =>
+                        this.setState(update(this.state, { selectedAttribute: { $set: value } }))
+                    }>
+                        {this.state.attributes.map((attribute) =>
+                            <Select.Option key={attribute.id} value={attribute.id}>{attribute.name}</Select.Option>)
+                        }
+                    </Select>
+                </Col>
+            </Row>
             <p />
-            <Button
-                onClick={() => this.props.onAttributesSelected(this.state.selectedAttribute)}
-                disabled={this.state.selectedAttribute === null}
-            >Next</Button>
+            <Row>
+                <Col>
+                    <Button
+                        onClick={() => this.props.onAttributesSelected(this.state.selectedAttribute)}
+                        disabled={this.state.selectedAttribute === null}
+                        size="large"
+                    >Next</Button>
+                </Col>
+            </Row>
         </div>;
     }
 }

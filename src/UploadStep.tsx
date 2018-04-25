@@ -1,4 +1,4 @@
-import { Button, Icon, Progress, Upload } from "antd";
+import { Button, Col, Icon, Progress, Row, Upload } from "antd";
 import { AxiosInstance } from "axios";
 import update from "immutability-helper";
 import * as React from "react";
@@ -29,15 +29,28 @@ export class UploadStep extends React.Component<IUploadStepProps, IUploadStepSta
   public render() {
 
     return <div>
-      <p>Please hit the Upload button to upload the DOCX document</p>
-      <Progress style={{ width: "75%" }} percent={this.state.progress} status="active" />
+      <Row>
+        <Col>
+          Please hit the Upload button to upload the DOCX document
+        </Col>
+      </Row>
       <p />
-      <Upload name="fileUpload" beforeUpload={this.upload.bind(this)} >
-        <Button disabled={this.state.uploading}>
-          <Icon type="upload" />
-          Upload
+      <Row>
+        <Col>
+          <Progress percent={this.state.progress} status="active" />
+        </Col>
+      </Row>
+      <p />
+      <Row>
+        <Col>
+          <Upload name="fileUpload" beforeUpload={this.upload.bind(this)} >
+            <Button disabled={this.state.uploading} size="large">
+              <Icon type="upload" />
+              Upload
           </Button>
-      </Upload>
+          </Upload>
+        </Col>
+      </Row>
     </div>;
   }
 

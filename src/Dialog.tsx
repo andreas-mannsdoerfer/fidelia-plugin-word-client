@@ -1,4 +1,4 @@
-import { Steps } from "antd";
+import { Divider, Steps } from "antd";
 import { AxiosInstance, AxiosStatic } from "axios";
 import update from "immutability-helper";
 import * as React from "react";
@@ -42,12 +42,13 @@ export class Dialog extends React.Component<IDialogProps, IDialogState> {
   }
 
   public render() {
-    return <div style={{ padding: "4px" }}>
-      <Steps size="small" current={this.state.step}>
+    return <div style={{ padding: "20px" }}>
+      <Steps current={this.state.step}>
         <Steps.Step title="Upload" />
         <Steps.Step title="Attribute" />
         <Steps.Step title="Import" />
       </Steps>
+      <Divider />
       {this.renderStep()}
     </div>;
   }
