@@ -49,7 +49,6 @@ export class ImportStep extends React.Component<IImportStepProps, IImportStepSta
                     "<p>File size: " + this.props.fileSize +
                     "</p><p>Paragraph count: " + this.props.paragraphCount +
                     "</p>",
-                externalId: "",
                 owners: [this.props.userId],
                 reviewers: [],
                 summary: "Word Import for " + this.props.fileName,
